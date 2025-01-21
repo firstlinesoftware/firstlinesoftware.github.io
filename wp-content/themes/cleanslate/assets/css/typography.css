@@ -1,0 +1,71 @@
+html {
+	font-size: 14px;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+h1, h2, h3 {
+	line-height: 1.1em;
+}
+h5, h6 {
+	line-height: 1.2em;
+}
+h1 {
+    font-size: 64px;
+}
+h2 {
+    font-size: 56px;
+}
+h3 {
+    font-size: 48px;
+}
+h4 {
+    font-size: 32px;
+	line-height: 1.32em;
+}
+h5 {
+	font-size: 24px;
+	letter-spacing: 0.3px;
+}
+h6 {
+    font-size: 20px;
+}
+.xxlarge, .xlarge, .large {
+	line-height: 1.4em;
+}
+.small, .xsmall {
+	line-height: 1.5em;
+}
+.xxlarge {
+	font-size: 24px;
+}
+.xlarge {
+	font-size: 18px;
+}
+.large {
+	font-size: 16px;
+}
+.small {
+	font-size: 12px;
+}
+.xsmall {
+	font-size: 10px;
+}
+strong, b, .bold {
+	font-weight: 700;
+}
+.semibold {
+	font-weight: 600;
+}
+.medium {
+	font-weight: 500;
+}
+.regular {
+	font-weight: 400;
+}

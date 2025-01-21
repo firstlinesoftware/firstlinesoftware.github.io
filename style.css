@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*!
+Theme Name: Clean slate
+Version: 1.0
+*/
+@import url("assets/css/reset.css");                                  /* Resetting browser defaults */
+@import url("assets/css/fonts.css");                                  /* Loading of fonts needed */
+@import url("assets/css/typography.css");                             /* Setting typography vars */
+@import url("assets/css/colors.css");                                 /* Setting color vars */
+@import url("assets/css/buttons.css");                                /* Setting button styles */
+@import url("assets/css/chatbot.css");                                /* Setting chatbot styles */
+@import url("assets/css/mobile.css") screen and (max-width: 767px);     /* Loading mobile style */
+@import url("assets/css/tablet.css") screen and (min-width: 768px) and (max-width: 1239px);   /* Loading tablet style */
+@import url("assets/css/desktop.css") screen and (min-width: 1240px); /* Loading desktop style */
+
+.align-center {
+	text-align: center;
+}

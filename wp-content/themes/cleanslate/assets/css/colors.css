@@ -1,0 +1,163 @@
+/* Main color */
+@property --primary-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #E88213;
+}
+@property --primary-frame {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FBC289;
+}
+
+/* Alerts color */
+@property --success-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #22C55E;
+}
+@property --success-frame {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #4ADE80;
+}
+@property --success-solid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #16A34A;
+}
+@property --warning-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FACC15;
+}
+@property --warning-frame {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FDE047;
+}
+@property --warning-solid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #EAB308;
+}
+@property --error-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #F75555;
+}
+@property --error-frame {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FCA5A5;
+}
+@property --error-solid {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #EF4444;
+}
+
+/* Grayscale */
+@property --gray-50 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #F8FAFC;
+}
+@property --gray-100 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #F1F5F9;
+}
+@property --gray-200 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #E2E8F0;
+}
+@property --gray-300 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #CBD5E1;
+}
+@property --gray-400 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #94A3B8;
+}
+@property --gray-500 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #64748B;
+}
+@property --gray-600 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #475569;
+}
+@property --gray-700 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #334155;
+}
+@property --gray-800 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #1E293B;
+}
+@property --gray-900 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0F1827;		
+/*  
+blue  initial-value: #161E2D;	
+ * initial-value: #111A20;	
+	*/
+}
+
+/* Just colors */
+@property --color-white {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FFFFFF;
+}
+@property --color-blue-light {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #E9F4FF;
+}
+@property --color-violet {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #8B5CF6;
+}
+@property --color-pink {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #EC4899;
+}
+@property --color-teal {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #2DD4BF;
+}
+@property --color-amber {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FBBF24;
+}
+@property --color-black {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0F1827;
+ /*
+blue   initial-value: #161E2D;
+	  initial-value: #0D1216;
+*/
+}
+
+body {
+	color: var(--color-black, #0F1827);
+/*
+ blue 	color: var(--color-black, #161E2D);
+	  initial-value: #0D1216;
+*/
+}
