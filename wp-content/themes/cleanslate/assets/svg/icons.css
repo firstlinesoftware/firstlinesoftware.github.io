@@ -1,10 +1,10 @@
 @font-face {
   font-family: "lucide";
-  src: url('lucide.eot%3Ft=1769165204291'); /* IE9*/
-  src: url('lucide.eot%3Ft=1769165204291') format('embedded-opentype') /* IE6-IE8 */,
-  url('lucide.woff2%3Ft=1769165204291') format('woff2'),
-  url('lucide.woff%3Ft=1769165204291') format('woff'),
-  url('lucide.ttf%3Ft=1769165204291') format('truetype'),
+  src: url('lucide.eot'); /* IE9*/
+  src: url('lucide.eot') format('embedded-opentype') /* IE6-IE8 */,
+  url('lucide.woff2') format('woff2'),
+  url('lucide.woff') format('woff'),
+  url('lucide.ttf') format('truetype'),
   url('https://firstlinesoftware.com/wp-content/themes/cleanslate/assets/svg/lucide.svg?t=1769165204291') format('svg');
 }
 

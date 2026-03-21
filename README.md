@@ -39,14 +39,35 @@ curl -o wp-content/themes/cleanslate/althubspot.css \
 
 Check the browser Network tab for any remaining 404s after first deploy.
 
-### 3. Files with `?ver=...` query strings
+### 3. Files with `?` in their name — what to keep and what to fix
 
-wget saves files with a literal `?` in the filename
-(e.g. `theme.js?ver=1773578688`). The HTML references them with a
-URL-encoded `%3F` (e.g. `src="theme.js%3Fver=1773578688"`).
+wget saves files with a literal `?` in the filename when the source URL had
+a query string (e.g. `theme.js?ver=1773578688`, `lucide.woff2?t=123`).
+These are fine for genuine local assets (theme JS/CSS, fonts).
 
-Python's `http.server` decodes `%3F` back to `?` before the filesystem
-lookup, so local serving works correctly without renaming files.
+**Do not commit local copies of external Google service scripts.** wget will
+download `gtag/js?id=...`, `optimize.js?id=...`, `ai/gen-app-builder/client?hl=...`,
+and GTM's `ns.html?id=...` as local files, but these scripts update frequently
+and must stay on their original CDN URLs. Restore them in `index.html`:
+
+```html
+<!-- Google Analytics -->
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-NFB2FD3" ...></script>
+<!-- Google Optimize -->
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-K6FFQ3T"></script>
+<!-- Google AI search widget -->
+<script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+<!-- GTM noscript iframe -->
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJLPZ5R" ...></iframe>
+```
+
+Also delete `pagead/` — it's a Google Ads conversion pixel response page, not
+needed in the repo.
+
+**How the `?ver=...` theme files are served locally** (Python `http.server`):
+The HTML references them with URL-encoded `%3F` (e.g. `src="theme.js%3Fver=..."`).
+The browser sends `%3F` as part of the path (not a query string), so Python
+decodes it to `?` and finds the file on disk.
 
 For files where the browser sends a real query string (e.g. `althubspot.css?ver=...`),
 Python's `http.server` strips the query part and serves `althubspot.css` — so
